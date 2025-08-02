@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Node {
+  int data;
+  struct Node* next;
+};
+struct Token {
+  char oBracket;
+  char cBracket;
+  char oParenth;
+  char cParenth;
+  char semicolon;
+  char intKeyword;
+  char returnKeyword;
+  char identifier;
+  int intLiteral;
+};
+struct Token tokens = {
+  .oBracket = "{",
+  .cBracket = "}",
+  .oParenth = "(",
+  .cParenth = ")",
+  .semicolon = ";",
+  .intKeyword = "int",
+  .returnKeyword = "return",
+  .identifier = "",
+  .intLiteral = 0
+};
+
+char* createDynamicString(const char* content) {
+    char* str = (char*)malloc(strlen(content) + 1);
+    if (str != NULL) {
+        strcpy(str, content);
+    }
+    return str;
+}
+
+
+
+// LEXER
+struct Node lexer(struct Node* node1, struct Token* tokens) {
+  int pos = 0;
+  
+  return tokens;
+}
+
+// PARSER
+
+// AST
+
+// COMPILER
+
+int main(void) {
+  printf("Hello World\n");
+  return 0;
+}
